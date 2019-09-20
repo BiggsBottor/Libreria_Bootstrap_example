@@ -1,9 +1,70 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Libreria</title>
-	<style>
+    <title>La Llibreria</title>
+    <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
+    <!-- cabecera -->
+    <header>
+        <!-- colocar logo a la izquierda -->
+        <img id="logo" src="images/logo-la-llibreria.jpg" alt="Logo La Llibrería">
+        <!-- Insertar espacio, si fuese necesario -->
+        <!-- colocar botones a la derecha -->
+        <span id="logbtn">
+        <!-- Log in User -->
+        <a href="#">LogIn</a>
+        <!-- Log out User -->
+        <a href="#">LogOut</a>        
+        </span>
+    </header>
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li>pagina1</li>
+            <li>pagina2</li>
+            <li>pagina3</li>
+        </ul>
+    </nav>
+    <!-- seccion principal -->
+    <!-- Busqueda de libros -->
+    <div class="banner">
+        <img id="mainBckGrd" src="images/llibreria-bckgrd.jpg" alt="búsqueda en la Llibrería">
+        <form id="search">
+            <input type="text" placeholder="Busca aquí tu libro">
+            <input type="button" value="Search">
+        </form>
+    </div>
+    <!-- libros destacados -->
+    <div class="container">
+        <div class="image">
+            <figure>
+                <img src="images/libro1.jpg" alt="libro1">
+                <figcaption>Libro 1</figcaption>
+            </figure>
+        </div>
+        <div class="image">
+            <figure>
+                <img src="images/libro2.jpg" alt="libro2">
+                <figcaption>Libro 2</figcaption>
+            </figure>
+        </div>
+        <div class="image">
+            <figure>
+                <img src="images/libro3.jpg" alt="libro3">
+                <figcaption>Libro 3</figcaption>
+            </figure>
+        </div>
+    </div>
+    <!-- Pie de página -->
+    <footer>
+        <p>direccion</p>
+        <p>telefono</p>
+        <p>email</p>
+        <p>redes sociales</p>
+    </footer>
 </body>
+
 </html>
