@@ -1,32 +1,84 @@
-#logbtn {
-    float: right;
+:root {
+    --my-green: #588f4d;
 }
+
+
+/* -- header -- */
+
+#logbtn {
+    font-size: 2em;
+}
+
+.sign-icon {
+    color: grey;
+}
+
+.sign-icon:hover {
+    /*color: lightgreen;*/
+    color: var(--my-green);
+}
+
+
+/* -- navigation -- */
 
 nav {
     background-color: lightgreen;
 }
 
-#mainBckGrd {
-    width: 100%;
-    height: auto;
+.custom-nav {
     position: relative;
 }
 
+.custom-nav::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    max-width: 100px;
+    height: 2px;
+    left: 0;
+    bottom: 0.5em;
+    background-color: grey;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-out;
+}
+
+.custom-nav:hover::before {
+    visibility: visible;
+    left: 0;
+    transform: scaleX(1);
+}
+
+
+/* -- main -- */
+
+#mainBckGrd {
+    width: 100%;
+    height: auto;
+    /*position: relative;*/
+}
+
+
+/*
 #search {
     position: absolute;
     top: 50%;
-    left: 30%;
+    left: 50%;
 }
+*/
 
-.container {
+.flex-container {
     display: flex;
 }
 
-.image {
+.flex-image {
     width: 30%;
     height: 30%;
     flex-direction: row;
 }
+
+
+/* -- footer -- */
 
 footer {
     background-color: lightgreen;
