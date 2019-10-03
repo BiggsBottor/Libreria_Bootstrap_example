@@ -25,9 +25,21 @@ nav {
     background-color: lightgreen;
 }
 
+
+/* --- nav animation BEGINING --- */
+
+
+/* posición de referéncia para la animación */
+
 .custom-nav {
     position: relative;
 }
+
+
+/*
+ según la posición de referéncia, se crea antes una linea 
+ con la que se hará la animación del menú
+*/
 
 .custom-nav::before {
     content: '';
@@ -43,6 +55,9 @@ nav {
     transition: all 0.3s ease-out;
 }
 
+
+/* al pasar el ratón por encima, hace visible la línea haciendo que crezca debido al transform */
+
 .custom-nav:hover::before {
     visibility: visible;
     left: 0;
@@ -50,31 +65,55 @@ nav {
 }
 
 
+/* --- nav animation END --- */
+
+
 /* -- main -- */
+
+#searchId {
+    position: relative;
+    text-align: center;
+}
 
 #mainBckGrd {
     width: 100%;
     height: auto;
-    /*position: relative;*/
 }
 
-
-/*
 #search {
     position: absolute;
     top: 50%;
     left: 50%;
-}
-*/
-
-.flex-container {
-    display: flex;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
 
-.flex-image {
-    width: 30%;
-    height: 30%;
-    flex-direction: row;
+@media only screen and (max-width: 992px) {
+    #searchTextId {
+        width: 30em;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #searchTextId {
+        width: 45em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #searchTextId {
+        width: 20em;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #searchTextId {
+        width: 10em;
+    }
+}
+
+.bookImage {
+    max-height: 20em;
 }
 
 
@@ -82,4 +121,6 @@ nav {
 
 footer {
     background-color: lightgreen;
+    padding: 1.25em 0;
+    padding-bottom: .5em;
 }

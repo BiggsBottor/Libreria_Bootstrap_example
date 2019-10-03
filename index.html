@@ -6,32 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Bootstrap 4 config link, icons font config link -->
     <link href="bootstrap/bootstrap.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" type="text/css" rel="stylesheet">
     <!-- Custom styles below -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- title and icon tab/window text -->
     <title>La Llibreria</title>
     <link href="images/icono-la-llibreria.jpg" rel="icon">
 </head>
 
 <body>
-    <!-- cabecera -->
+    <!-- // cabecera // -->
     <div class="container">
         <header class="d-flex justify-content-between">
-            <!-- colocar logo a la izquierda -->
-            <a id="Logo-link-id" class="logo-link navbar-brand w-25" href="index.html">
-                <img id="Logo-img-id" class="logo-img d-inline img-fluid" src="images/logo-la-llibreria.png" alt="Logo La Llibrería">
+            <a class="logo-link navbar-brand w-25" id="Logo-link-id" href="index.html">
+                <img class="logo-img d-inline img-fluid" id="Logo-img-id" src="images/logo-la-llibreria.png" alt="Logo La Llibrería">
             </a>
-            <!-- colocar botones a la derecha -->
             <span class="align-self-center" id="logbtn" class="">
-                <!-- Log in User -->
                 <a class="sign-icon" href="#"><i class="fa fa-user"></i></a>
-                <!-- Log out User -->
                 <a class="sign-icon ml-3" href="#"><i class="fa fa-sign-out"></i></a>        
             </span>
         </header>
     </div>
-    <!-- Barra de navegación -->
+    <!-- // Barra de navegación // -->
     <nav class="text-center">
         <div class="nav justify-content-center text-uppercase">
             <a class="custom-nav nav-item nav-link text-dark" href="#">pagina1</a>
@@ -41,36 +39,41 @@
     </nav>
     <!-- // seccion principal // -->
     <!-- Busqueda de libros -->
-    <div class="banner">
-        <img id="mainBckGrd" src="images/llibreria-bckgrd.jpg" alt="búsqueda en la Llibrería">
-        <form id="search">
-            <input type="text" placeholder="Busca aquí tu libro">
-            <input type="button" value="Search">
-        </form>
+    <div>
+        <div class="container-fluid px-0" id="searchId">
+            <img class="img-fluid" id="mainBckGrd" src="images/llibreria-bckgrd.jpg" alt="búsqueda en la Llibrería">
+            <form class="d-flex justify-content-center" id="search">
+                <input class="form-control" id="searchTextId" type="text" placeholder="Busca aquí tu libro">
+                <button class="btn btn-secondary" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
     </div>
     <!-- libros destacados -->
-    <div class="flex-container">
-        <div class="flex-image">
-            <figure>
-                <img src="images/libro1.jpg" alt="libro1">
-                <figcaption>Libro 1</figcaption>
-            </figure>
-        </div>
-        <div class="flex-image">
-            <figure>
-                <img src="images/libro2.jpg" alt="libro2">
-                <figcaption>Libro 2</figcaption>
-            </figure>
-        </div>
-        <div class="flex-image">
-            <figure>
-                <img src="images/libro3.jpg" alt="libro3">
-                <figcaption>Libro 3</figcaption>
-            </figure>
+
+    <div class="container mt-5">
+        <div class="row text-center">
+            <div class="col-12 col-sm-6 col-lg-4">
+                <figure>
+                    <img class="bookImage img-fluid" src="images/libro1.jpg" alt="libro1">
+                    <figcaption>Libro 1</figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <figure>
+                    <img class="bookImage img-fluid" src="images/libro2.jpg" alt="libro2">
+                    <figcaption>Libro 2</figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <figure>
+                    <img class="bookImage img-fluid" src="images/libro3.jpg" alt="libro3">
+                    <figcaption>Libro 3</figcaption>
+                </figure>
+            </div>
         </div>
     </div>
-    <!-- Pie de página -->
-    <footer>
+    <!-- // Pie de página // -->
+    <footer class="text-center mt-4">
         <p>direccion</p>
         <p>telefono</p>
         <p>email</p>
