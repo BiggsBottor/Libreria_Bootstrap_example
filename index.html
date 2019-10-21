@@ -23,10 +23,64 @@
             <a class="logo-link navbar-brand w-25" id="Logo-link-id" href="index.html">
                 <img class="logo-img d-inline img-fluid" id="Logo-img-id" src="images/logo-la-llibreria.png" alt="Logo La Llibrería">
             </a>
-            <span class="align-self-center" id="logbtn" class="">
-                <a class="sign-icon" href="#"><i class="fa fa-user"></i></a>
-                <a class="sign-icon ml-3" href="#"><i class="fa fa-sign-out"></i></a>        
+            <span class="align-self-center" id="logbtn">
+                <button type="button" class="btn_color btn_size btn" data-toggle="modal" data-target="#UserPopUp"><i class="fa fa-user"></i></button>
+                <button type="button" class="btn_color btn_size btn" id="logOut"><i class="fa fa-sign-out"></i></button>
             </span>
+            <!-- ventana emergente para validar o registrar usuario -->
+            <!-- The Modal -->
+            <div class="modal" id="UserPopUp">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Login de usuario</h4>
+                            <button type="button" class="close_form close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <!-- Formulario de Login -->
+                            <form class="form-group" id="formUserLogin" novalidate>
+                                <!-- email -->
+                                <input class="form-control" id="emailText" type="text" placeholder="Email" required>
+                                <small id="emailHelp" class="form-text text-danger mb-3 invisible">Texto del error</small>
+                                <!-- contraseña -->
+                                <input class="form-control" id="pswdText" type="password" placeholder="Contraseña" required>
+                                <small id="pswdHelp" class="form-text text-danger mb-3 invisible">Texto del error</small>
+                                <i id="eye" class="eye fa fa-eye-slash grey_color"></i>
+                                <!-- botones de control de login y registro -->
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button class="btn_bgcolor btn btn-secondary" id="login" type="button">Login</button>
+                                    <button class="btn_bgcolor btn btn-secondary" id="registerLogin" type="button">Registro</button>
+                                </div>
+                            </form>
+                            <!-- Formulario de Registro -->
+                            <form class="form-group d-none" id="formUserRegister">
+                                <p>Todos los campos son obligatorios</p>
+                                <!-- email -->
+                                <input class="form-control" id="emailTextRegister" type="text" placeholder="Email" required>
+                                <small id="emailHelpRegister" class="form-text text-danger mb-3 invisible">Texto del error</small>
+                                <!-- contraseña 1 -->
+                                <input class="form-control" id="pswdTextRegister" type="password" placeholder="Contraseña" required>
+                                <small id="pswdHelpRegister" class="form-text text-danger mb-3 invisible">Texto del error</small>
+                                <i id="eyeRegister" class="eye fa fa-eye-slash grey_color"></i>
+                                <!-- contraseña 2 -->
+                                <input class="no_copy form-control" id="pswdText2Register" type="password" placeholder="Repite Contraseña" required>
+                                <small id="pswdHelp2Register" class="form-text text-danger mb-3 invisible">Texto del error</small>
+                                <!-- botones de control de login y registro -->
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button class="btn_bgcolor btn btn-secondary" id="register" type="button">Enviar</button>
+                                    <button class="btn_bgcolor btn btn-secondary" id="loginRegister" type="button">volver al Login</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="close_form btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
     </div>
     <!-- // Barra de navegación // -->
@@ -42,10 +96,19 @@
     <div>
         <div class="container-fluid px-0" id="searchId">
             <img class="img-fluid" id="mainBckGrd" src="images/llibreria-bckgrd.jpg" alt="búsqueda en la Llibrería">
-            <form class="d-flex justify-content-center" id="search">
-                <input class="form-control" id="searchTextId" type="text" placeholder="Busca aquí tu libro">
-                <button class="btn btn-secondary" type="submit"><i class="fa fa-search"></i></button>
+            <!-- barra de búsqueda -->
+            <form class="d-flex justify-content-center" id="search" novalidate>
+                <input class="form-control" id="searchTextId" type="text" placeholder="Busca aquí tu libro" required>
+                <button class="btn_bgcolor btn btn-secondary ml-2" id="searchBtnId" type="button">
+                    <i class="fa fa-search"></i></button>
             </form>
+            <!-- mesaje de alerta si no hay suficientes caracteres de búsqueda -->
+            <div class="alert alert-warning alert-dismissible fade show d-flex justify-content-center invisible" role="alert">
+                <span>la búsqueda debe tener más de 3 carácteres.</span>
+                <button type="button" class="close_alert close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
         </div>
     </div>
     <!-- libros destacados -->

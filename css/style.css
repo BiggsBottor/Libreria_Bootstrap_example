@@ -5,17 +5,58 @@
 
 /* -- header -- */
 
-#logbtn {
+.btn_size {
     font-size: 2em;
 }
 
-.sign-icon {
+.btn_color,
+.grey_color {
     color: grey;
 }
 
-.sign-icon:hover {
-    /*color: lightgreen;*/
+.btn_color:hover {
+    /*custom color green;*/
     color: var(--my-green);
+}
+
+
+/*-- ojo de passwords --*/
+
+.eye {
+    position: absolute;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#eye {
+    left: 85%;
+    top: 40%;
+}
+
+#eyeRegister {
+    left: 85%;
+    top: 38%;
+}
+
+@media only screen and (max-width: 425px) {
+    #eye,
+    #eyeRegister {
+        left: 81%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    #eye,
+    #eyeRegister {
+        left: 78%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #eye,
+    #eyeRegister {
+        left: 74%;
+    }
 }
 
 
@@ -88,9 +129,33 @@ nav {
     -ms-transform: translate(-50%, -50%);
 }
 
+.alert {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.btn_bgcolor {
+    background-color: grey;
+}
+
+.btn_bgcolor:hover {
+    /*custom color green;*/
+    background-color: var(--my-green);
+}
+
+
+/* ajuste del tamaño de la barra de navegación según tamaño de la ventana */
+
 @media only screen and (max-width: 992px) {
     #searchTextId {
         width: 30em;
+    }
+    .alert {
+        width: 30em;
+        top: 60%
     }
 }
 
@@ -98,17 +163,35 @@ nav {
     #searchTextId {
         width: 45em;
     }
+    .alert {
+        width: 30em;
+        top: 58%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     #searchTextId {
         width: 20em;
     }
+    .alert {
+        width: 26em;
+        top: 61%;
+    }
 }
 
 @media only screen and (max-width: 576px) {
     #searchTextId {
         width: 10em;
+    }
+    .alert {
+        width: 16em;
+        top: 68%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .alert {
+        top: 78%;
     }
 }
 
